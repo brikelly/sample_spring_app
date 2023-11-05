@@ -1,10 +1,12 @@
 name: CI
 
 on:
-  pull_request:
   push:
     branches:
       - main
+  pull_request:
+  schedule:
+    - cron: '0 0 * * 0'
 
 permissions:
   # Allows the EndBug/add-and-commit step to commit the package manager changes,
